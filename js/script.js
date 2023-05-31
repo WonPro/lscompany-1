@@ -307,3 +307,11 @@ $(function(){
     })
 });
 
+  /********* SystemDev.html *********/
+  $('#systemDev #section4 #swiper').slick({
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    dots: false,
+  });
