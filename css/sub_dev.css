@@ -17,19 +17,20 @@
 
 	.secTitle{
 		font-size: 5.6rem;
-		color: #282828;
+		color: var(--dark);
 	}
 
 	.subTitle{
 		margin-top: 3rem;
 		font-size: 2.4rem;
-		color: #888;
+		color: var(--gray2);
 	}
 
-	.fontMint{
+	/* Orange로 했을때 클래스명이 시멘틱하지않아서 fontOrange에서 fontColor로 변경함 */
+	.fontColor{
 		font-size: inherit;
 		font-weight: inherit;
-		color: #00AFC3;
+		color: var(--mint);
 	}
 
 	@media screen and (max-width: 1279px) {
@@ -53,13 +54,11 @@
 
 		.secTitle{
 			font-size: 3rem;
-			word-break: keep-all;
 		}
 
 		.subTitle{
 			font-size: 1.6rem;
 			line-height: 1.2;
-			word-break: keep-all;
 		}
 	}
 
@@ -97,16 +96,10 @@
 		#systemDev #section1 .secTitle div{
 			font-size: 8.6rem;
 			font-weight: 700;
-			color: #494949;
+			color: var(--gray1);
+			margin-bottom: 20px; /* 행간이 좁아서 속성 추가함 @수정*/
 		}
 
-		/* #systemDev #section1 .secTitle.title1{
-			opacity: 0;
-			animation-name: titleFirstMotion;
-			animation-duration: 2.5s;
-			animation-delay: 1s;
-			animation-fill-mode: forwards;
-		} */
 		#systemDev #section1 .secTitle.title2{
 			opacity: 0;
 			animation-name: titleSecondMotion;
@@ -119,25 +112,27 @@
 			width: 100%;
 			margin-top: 12rem;
 			position: absolute;
-			top: 50%;
+			top: 52%; /* 행간이 좁아서 50%에서 52%로 수정함 @수정*/
 			left: 50%;
 			transform: translate(-50%, -50%);
 			text-align: center;
 		}
 		
 		#systemDev #section1 .subTitle .title1{
-			margin-bottom: 2rem;
+			margin-bottom: 3rem; /* 2rem에서 3rem으로 수정함 @수정 */
 			transform: translateY(500%);
 			opacity: 0;
 			font-size: 2.8rem;
+			font-weight: 600; /* 폰트두께 피그마와 달라서 속성 추가함 @수정 */
+			color: var(--dark); /* 색상 피그마와 달라서  수정함 @수정 */
 			animation-name: titleTopMotion;
 			animation-duration: 1s;
 			animation-delay: 2.5s;
 			animation-fill-mode: forwards;
 			animation-timing-function: cubic-bezier(.9,0,.58,1);
 		}
-
-		#systemDev #section1 .subTitle .title1 .fontMint{
+		
+		#systemDev #section1 .subTitle .title1 .fontColor{
 			margin-right: 2rem;
 		}
 
@@ -182,13 +177,15 @@
 				transform: translateY(0);
 			}
 		}
+	
 
 		@media screen and (max-width: 767px) {
 			#systemDev #section1 .secTitle,
 			#systemDev #section1 .secTitle div{
 				font-size: 5rem;
 				line-height: 1.2;
-				color: #494949;
+				margin-bottom: 6px; /* 추가함 @수정 */
+				/* color: var(--gray1);  위에 색상값 줘서 중복 삭제함 @수정 */
 			}
 
 			#systemDev #section1 .subTitle{
@@ -199,17 +196,15 @@
 			#systemDev #section1 .subTitle .title1{
 				font-size: 2rem;
 				line-height: 1.2;
-				word-break: keep-all;
 			}
 
-			#systemDev #section1 .subTitle .title1 .fontMint{
+			#systemDev #section1 .subTitle .title1 .fontColor{
 				margin-right: 0.5rem;
 			}
 
 			#systemDev #section1 .subTitle .title2{
 				font-size: 1.4rem;
 				line-height: 1.2;
-				word-break: keep-all;
 			}
 		}
 
@@ -218,7 +213,7 @@
 	/********* section2 *********/
 
 		#systemDev #section2{
-			background-color: #f8f8f8;
+			background-color: var(--gray6);
 		}
 
 		#systemDev #section2 .secTitle,
@@ -235,8 +230,8 @@
 			display: flex;
 			align-items: center;
 			gap: 2rem;
-			background-color: #fff;
-			border: 1px solid #e1e1e1;
+			background-color: var(--white);
+			border: 1px solid var(--gray4);
 			border-radius: 2rem;
 		}
 
@@ -251,61 +246,21 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			border-left: 1px solid #f0f0f0;
+			border-left: 1px solid var(--gray5);
 		}
 
-
 		#systemDev #section2 .profile figcaption .caption{
-			margin-bottom: 1.4rem;
+			color: var(--dark); /* 000에서 2828로 @수정 */
+			margin-top: .5rem; /* 센터안맞는것 같아서 추가함 @수정*/
+			margin-bottom: 1.7rem; /* 1.4rem에서 1.7rem으로 @수정*/
 			font-size: 2.4rem;
 		}
 
 		#systemDev #section2 .profile figcaption .description{
 			margin-bottom: 1rem;
 			font-size: 1.6rem;
-			color: #888;
-			word-break: keep-all;
-			line-height: 1.2;
-		}
-
-		#systemDev #section2 .storyWrap{
-			width: 100%;
-			margin: 2rem auto 0;
-			width: 60rem;
-			padding: 1rem;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			background-color: #fff;
-			border: 1px solid #e1e1e1;
-			border-radius: 10rem;
-		}
-
-		#systemDev #section2 .storyWrap .contTitle{
-			padding-left: 5.5rem;
-			font-size: 2rem;
-			color: #000;
-		}
-
-		#systemDev #section2 .storyWrap .btnTeamStroy .btnNm{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			gap: 10px;
-		}
-
-		#systemDev #section2 .storyWrap .btnTeamStroy .btnNm .fa-instagram{
-			width: 3rem;
-			height: 3rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-size: 2.6rem;
-			color: #00AFC3;
-		}
-
-		#systemDev #section2 .storyWrap .btnTeamStroy:hover .btnNm .fa-instagram{
-			color: #fff;
+			color: var(--gray2);
+			line-height: 1; /* 1.2에서 1로 @수정 */
 		}
 
 		@media screen and (max-width: 1366px) {
@@ -365,7 +320,6 @@
 				font-size: 1.4rem;
 				text-align: center;
 				line-height: 1.4;
-				word-break: keep-all;
 			}
 		}
 		
@@ -374,6 +328,7 @@
 	/********* section3 *********/
 		#systemDev #section3 .innerWrap{
 			width: 100%;
+			color: var(--dark); /* 색상 000으로 되어있어서 #282828 속성 추가함 @수정 */
 		}
 
 		#systemDev #section3 .secTitle,
@@ -397,11 +352,14 @@
 			float: left;
 			padding: 7rem 4.6rem;
 			border-radius: 11rem;
-			background-color: #f8f8f8;
+			background-color: var(--gray6);
+			display: flex; /* 추가함 @수정 */
+			flex-direction: column; /* 추가함 @수정 */
+			justify-content: center; /* 추가함 @수정 */
 		}
 
 		#systemDev #section3 .contWrap .content1{
-			background-color: #f8f8f8;
+			background-color: var(--gray6);
 		}
 		#systemDev #section3 .contWrap .content2{
 			margin-left: -3rem;
@@ -418,24 +376,13 @@
 		#systemDev #section3 .contWrap .content5{
 			width: 19rem;
 			margin-left: -3rem;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			color: #fff;
-			background-color: #282828;
+			/* display: flex; */
+			/* flex-direction: column; */
+			/* justify-content: center; */
+			color: var(--white);
+			background-color: var(--dark);
 			border-radius: 50%;
 		}
-		
-		/* #systemDev #section3 .contWrap .content4{
-			width: 19rem;
-			margin-left: -3rem;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: #282828;
-			border-radius: 50%;
-		} */
-
 		#systemDev #section3 .contWrap .contentBox .contTitle{
 			font-size: 2rem;
 			font-weight: 600;
@@ -454,11 +401,15 @@
 		}
 
 		#systemDev #section3 .contWrap .contentBox .contDesc .contText{
+			line-height: 1.6;
 			margin: 0 2rem;
 			padding-left: 1rem;
 			padding-right: 1rem;
 			position: relative;
 			font-size: 1.4rem;
+			display: flex; /* 추가함 @수정 */
+			flex-direction: column; /* 추가함 @수정 */
+			justify-content: center; /* 추가함 @수정 */
 		}
 
 		#systemDev #section3 .contWrap .contentBox.content5 .contText{text-align: center;}
@@ -486,7 +437,7 @@
 			top: 5px;
 			left: -5px;
 			border-radius: 50%;
-			background-color: #282828;
+			background-color: var(--dark);
 		}
 
 		#systemDev #section3 .contWrap .contentBox .contDesc .contText:first-child:before,
@@ -526,6 +477,7 @@
 		}
 
 		@media screen and (max-width: 767px) {
+	
 			#systemDev #section3 .secTitle{
 				width: 100%;
 				line-height: 1.2;
@@ -538,17 +490,19 @@
 			}
 
 			#systemDev #section3 .contWrap .contentBox .contTitle{
-				word-break: keep-all;
 				line-height: 1.2;
+			}
+			#systemDev #section3 .contWrap .contentBox.content1 .contTitle{
+				text-align: center;
 			}
 
 			#systemDev #section3 .contWrap .contentBox .contDesc .contText{
 				padding-right: 0.2rem;
-				word-break: keep-all;
+				line-height: 1.2; /* 추가함 @수정 */
 			}
 
 			#systemDev #section3 .contWrap .content4{
-				width: 16rem;
+				width: 16rem;   /* 16rem에서 20rem으로 수정함 @수정 */
 			}
 
 		}
@@ -564,7 +518,7 @@
 	/********* section4 *********/
 
 		#systemDev #section4{
-			background-color: #f0f0f0;
+			background-color: var(--gray5);
 			padding-top: 16rem;
 			padding-bottom: 0;
 		}
@@ -592,7 +546,6 @@
 			margin-bottom: 0.6rem;
 		}
 		#systemDev #section4 .innerWrap .swiperWrapper{
-			/* border-radius: 24px; */
 			width: 40rem;
 			height: 71rem;	
 			position: relative;
@@ -629,48 +582,39 @@
 
 		@media screen and (max-width: 1279px) {
 
-			#systemDev #section4 .subTitle{
-				width: 32rem;
+			#systemDev #section4 .wrapper{
+				width: 44%;
 			}
-
 			#systemDev #section4 .subTitle div{
 				line-height: 1.2;
-				word-break: keep-all;
 			}
 
 		}
 
 		@media screen and (max-width: 767px) {
+
 			#systemDev #section4 .innerWrap{
 				display: flex;
 				flex-direction: column;
 			}
-
-			#systemDev #section4 .secTitle,
-			#systemDev #section4 .subTitle{
-				width: 100%;
+			#systemDev #section4 .wrapper{
+				width: 90%;
 				text-align: center;
 			}
-
-			#systemDev #section4 .secTitle{
-				margin: 0 auto;
-			}
-
 			#systemDev #section4 .subTitle div{
-				width: 100%;
-				margin: 1rem auto;
 				line-height: 1.2;
 			}
 			#systemDev #section4 .innerWrap .swiperWrapper{
-				width: 40rem;
-				height: 71rem;	
-				padding: 66px 53px 0 53px ;
+				width: 30rem;
+				height: 53.2rem;	
+				padding: 49px 39px 0 39px ;
 				margin-top: 7rem;
 			}
 			#systemDev #section4 .innerWrap .swiperWrapper .swiperItem{
-				/* width: 100%; */
-				height: 52.2rem;
+				width: 100%;
+				height: 39.1rem;
 			}
+			
 		}
 /***************************************
 *           //systemDev.html           *

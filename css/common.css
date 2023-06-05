@@ -1,5 +1,31 @@
 @charset "utf-8";
 
+/***************************************
+*             수정-김진영              *
+***************************************/
+body{
+	/* 중복되는 keep-all body에 공통적용 */
+	word-break: keep-all;
+	/* 드래그 막기 */
+	-webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+/* 색상변수선언 */
+:root{
+	--pink: #E50A84;
+	--mint: #00AFC3;
+	--orange: #ffb926;
+	--dark: #282828;
+	--gray1: #494949;
+	--gray2: #888;
+	--gray3: #bdbdbd;
+	--gray4: #e1e1e1;
+	--gray5: #f0f0f0;
+	--gray6: #f8f8f8;
+	--white: #fff;
+}
 
 /***************************************
 *              Common Css              *
@@ -678,3 +704,6 @@
 #popupWrap .popupFrame .popupContent .popupTitle{
 	font-size: 2rem;
 }
+
+
+
