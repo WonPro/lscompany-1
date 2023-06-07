@@ -95,7 +95,7 @@ $(function(){
         $('html, body').stop().animate({
           scrollTop : moveTo+'px'
         }, {
-          duration:300,
+          duration:500,
           complete: function(){
 
           }
@@ -308,7 +308,7 @@ $(function(){
 });
 
   /********* SystemDev.html *********/
-  $('#systemDev #section4 #swiper').slick({
+  $('#systemDev #section4 #systemDevSwiper').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 1500,

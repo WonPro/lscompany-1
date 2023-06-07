@@ -55,7 +55,7 @@ body{
 		position: absolute;
 		top: 0;
 		left: -100%;
-		background-color: #e50a84;
+		background-color: var(--pink);
 		transition: left .3s;
 	}
 	.btn:hover:before,
@@ -67,9 +67,9 @@ body{
 		padding: 2.3rem 2.8rem;
 		position: relative;		
 		background-color: #fff;
-		border: 1px solid #e50a84;
+		border: 1px solid var(--pink);
 		border-radius: 3rem;
-		color: #E50A84;
+		color: var(--pink);
 		overflow: hidden;
 	}
 	.btn.btn2:before{
@@ -79,7 +79,7 @@ body{
 		position: absolute;
 		top: 0;
 		left: -100%;
-		background-color: #e50a84;
+		background-color: var(--pink);
 		transition: left .3s;
 	}
 	.btn2:hover .btnNm,
@@ -112,16 +112,16 @@ body{
 	}
 	.btn3:hover,
 	.btn3.active{
-		color: #e50a84;
+		color: var(--pink);
 	}
 	
 	.btn.btn4{
 		padding: 1.4rem 2.3rem;
 		position: relative;
 		background-color: #fff;
-		border: 1px solid #ffb926;
+		border: 1px solid var(--orange);
 		border-radius: 10rem;
-		color: #ffb926;
+		color: var(--orange);
 		overflow: hidden;
 	}
 	.btn.btn4:before{
@@ -131,7 +131,7 @@ body{
 		position: absolute;
 		top: 0;
 		left: -100%;
-		background-color: #ffb926;
+		background-color: var(--orange);
 		transition: left .3s;
 	}
 	.btn4:hover .btnNm,
@@ -147,9 +147,9 @@ body{
 		padding: 1.4rem 2.3rem;
 		position: relative;		
 		background-color: #fff;
-		border: 1px solid #ffb926;
+		border: 1px solid var(--orange);
 		border-radius: 10rem;
-		color: #ffb926;
+		color: var(--orange);
 		overflow: hidden;
 	}
 	.btn.btn5:before{
@@ -159,7 +159,7 @@ body{
 		position: absolute;
 		top: 0;
 		left: -100%;
-		background-color: #ffb926;
+		background-color: var(--orange);
 		transition: left .3s;
 	}
 	.btn5:hover .btnNm,
@@ -168,6 +168,37 @@ body{
 	}
 	.btn5:hover:before,
 	.btn5.active:before{
+		left: 0;
+	}
+
+	.btn.btn6{
+		padding: 1.4rem 2.3rem;
+		position: relative;		
+		background-color: #fff;
+		border: 1px solid var(--mint)
+		;
+		border-radius: 10rem;
+		color: var(--mint)
+		;
+		overflow: hidden;
+	}
+	.btn.btn6:before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+		background-color: var(--mint)
+		;
+		transition: left .3s;
+	}
+	.btn6:hover .btnNm,
+	.btn6.active .btnNm{
+		color: #fff;
+	}
+	.btn6:hover:before,
+	.btn6.active:before{
 		left: 0;
 	}
 	
@@ -292,7 +323,7 @@ body{
 		position: absolute;
 		bottom: 2.3rem;
 		left: 2rem;
-		background-color: #E50A84;
+		background-color: var(--pink);
 		-webkit-transition: width .3s;
 		-moz-transition: width .3s;
 		transition: width .3s;
